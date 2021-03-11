@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Checkout page</title>
+    </head>
+    <body>
+        
+
+        <main>
+           <section>
+               <h2>Checkout</h2>
+               <form>
+                   <fieldset>
+                        <legend>1. Billing information</legend>
+                        <input type ="text" text="name" id="name" name="name">
+                        <input type="text" text="address" id="address" name="address">
+                        <input type="number" >
+                   </fieldset>
+               </form>
+           </section>
+           <section>
+               <form>
+                   <fieldset>
+                       <legend>2. Payment Information</legend>
+                        <input type="radio" name="payment" value="card" id="card"><label for="card">Card</label>
+                        <input type="radio" name="payment" value="paypal" id="paypal"><label for="paypal">Paypal</label>
+                        <input type="radio" name="payment" value="invoice" id="invoice"><label for="invoice">Invoice</label>
+                    </fieldset>         
+                </form>
+               <div>
+                   <form>
+                       <input type="submit" value="Place Order">
+                   </form>
+               </div>
+           </section>
+        </main>
+    </body>
+</html>

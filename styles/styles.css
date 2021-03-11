@@ -1,0 +1,13 @@
+label::after {
+    content: "";
+}
+
+.logo {
+    width: 250px;
+    height: 100px;
+}
+
+.icon {
+    width: 10px;
+    height: 10px;
+}
