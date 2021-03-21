@@ -1,28 +1,77 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Rainydays website</title>
+    <title>Rainydays | Home</title>
     <link href="styles/styles.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Buy raincoats and jackets for every activity here">
+    <meta charset="UTF-8">
   </head>
 
   <body>
     <header>
-      <nav>
-        <a href="index.html">
-          <img src="images/RainyDays_Logo2.png" alt="logo" class="logo">
-        </a>
+      <a href="index.html">
+        <img src="images/RainyDays_Logo2.png" alt="logo" class="logo">
+      </a>
+      <nav class="menu">
         <ul>
           <li><a href="index.html" class="current">Home</a></li>
           <li><a href="productlist.html">Women</a></li>
           <li><a href="contact.html">Contact</a></li>
           <li><a href="about.html">About Us</a></li>
-          <a href="#"><img src="images/Log in.svg" alt="login" class="icon"></a>
-          <a href="#"><img src="images/Shopping cart.svg" alt="cart" class="icon"></a>
         </ul>
-
       </nav>
-
+      <div class="icons">
+        <a href="#"><img src="images/Search.svg" alt="search"></a>
+        <a href="#"><img src="images/Log in.svg" alt="login"></a>
+        <a href="#"><img src="images/Shopping cart.svg" alt="cart"></a>
+      </div>
     </header>
-  </body>
 
+    <main>
+      <section class="welcome">
+        <h1>Pushing the limits</h1>
+      </section>
+
+      <h2 class="explore_title">EXPLORE</h2>
+      <section class="explore">
+        <div class="hiking">
+          <img src="images/hiking_small.jpg" alt="man hiking in forest" class="explore_images" />
+          <a href="productlist.html" class="cta">Hiking</a>
+        </div>
+        <div class="exploring">
+            <img src="images/exploring_small.jpg" alt="man hiking in mountain" class="explore_images" />
+            <a href="productlist.html" class="cta">Exploring</a>
+        </div>
+        <div class="skiing">
+          <img src="images/skiing_small.jpg" alt="people skiing cross country" class="explore_images" />
+          <a href="productlist.html" class="cta">Skiing</a>
+        </div>
+        <div class="canoeing">
+          <img src="images/canoeing_small.jpg" alt="canoeing on water" class="explore_images" />
+          <a href="productlist.html" class="cta">Canoeing</a>
+        </div>
+      </section>
+
+      <section class="trending">
+        <div>
+          <h2>TRENDING</h2>
+          <p>Explore our new affordable collection of jackets suitable for your nature adventure.</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+        <img src="images/trending_small.jpg" alt="trendingwoman" class="trendingwoman">
+      </section>
+    </main>
+
+    <footer>
+      <img src="images/RainyDays_Logo2.png" alt="logo" class="logo">
+      <ul class="tiny_links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="productlist.html">Women</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="about.html">About Us</a></li>
+      </ul>
+     <p class="copyright">Copyright &copy;</p>
+    </footer>
+  </body>
 </html>
