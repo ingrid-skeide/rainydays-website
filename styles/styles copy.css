@@ -1,10 +1,18 @@
 body {
     margin: 0;
-}
+    display: grid;
+    grid-template-columns: 1fr; /* Don't set to auto because it will only span length of content*/
+    grid-template-rows: 80px auto 200px;
+    grid-template-areas:
+    'header'
+    'main'
+    'footer';
+    }
 
     /* Header */
 
 header {
+    grid-area: header;
     background-color: #D9DDD1;
     display: flex;
     align-items: center; /* doesn't work without flex */
@@ -65,35 +73,15 @@ nav a:hover, .current {
 
 main {
     margin: 0;
+    grid-area: main;
 }
 
 .welcome {
     min-height: 100px;
 }
 
-.featured {
-    display: grid;
-    grid-template-columns: ;
-    grid-template-rows: repeat(4, 1fr);
-    grid-template-areas: 
-    'explore-one'
-    'explore-two'
-    'explore-three'
-    'explore-four';
-}
-
-.featured h2 {
-    grid-column: -1/1;
-}
-
-.explore:nth-child(1) {grid-area: explore-one;}
-.explore:nth-child(2) {grid-area: explore-two;}
-.explore:nth-child(3) {grid-area: explore-three;}
-.explore:nth-child(4) {grid-area: explore-four;}
-
 .explore_images {
     border-radius: 10px;
-    max-width: 100%;
 }
 
 .trending {
@@ -104,6 +92,7 @@ main {
 
 footer {
     margin: 0;
+    grid-area: footer;
     background-color: #92A190;
 }
 
@@ -111,6 +100,16 @@ footer {
 /* Tablet */
 
 @media  (min-width: 600px) {
+    body {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 80px auto 1fr;
+        grid-template-areas: 
+        'header header'
+        'main main'
+        'footer footer'
+        ;
+    }
+
     /* Header tablet*/
     nav {
         display: inline-block;
@@ -135,32 +134,10 @@ footer {
     position: relative;
 }
 
-    .featured {
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(2, 1fr);
-        grid-template-areas: 
-        'explore-one explore-two'
-        'explore-three explore-four';
-    }
-
-    .featured h2 {
-        grid-column: -1/1;
-    }
-
     /* Footer tablet*/
+}
 
-    /* Web */   
+/* Web */
 
 @media  (min-width: 800px) {
-    /* Main web*/
-    .featured {
-        grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: auto;
-        grid-template-areas: 
-        'explore-one explore-two explore-three explore-four';
-    }
-
-    .featured h2 {
-        grid-column: -1/1;
-    }
 }

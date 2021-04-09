@@ -3,16 +3,20 @@
   <head>
     <title>Rainydays | Home</title>
     <link href="styles/styles.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Buy raincoats and jackets for every activity here">
     <meta charset="UTF-8">
   </head>
 
   <body>
+
     <header>
       <a href="index.html">
         <img src="images/RainyDays_Logo2.png" alt="logo" class="logo">
       </a>
+      <label class="hamburger-label" for="hamburger-menu"><i class="fas fa-bars"></i></label>
+      <input type="checkbox" id="hamburger-menu">
       <nav class="menu">
         <ul>
           <li><a href="index.html" class="current">Home</a></li>
@@ -21,11 +25,6 @@
           <li><a href="about.html">About Us</a></li>
         </ul>
       </nav>
-      <div class="icons">
-        <a href="#"><img src="images/Search.svg" alt="search"></a>
-        <a href="#"><img src="images/Log in.svg" alt="login"></a>
-        <a href="#"><img src="images/Shopping cart.svg" alt="cart"></a>
-      </div>
     </header>
 
     <main>
@@ -33,21 +32,21 @@
         <h1>Pushing the limits</h1>
       </section>
 
-      <h2 class="explore_title">EXPLORE</h2>
-      <section class="explore">
-        <div class="hiking">
+      <section class="featured">
+        <h2>EXPLORE</h2>
+        <div class="explore">
           <img src="images/hiking_small.jpg" alt="man hiking in forest" class="explore_images" />
           <a href="productlist.html" class="cta">Hiking</a>
         </div>
-        <div class="exploring">
+        <div class="explore">
             <img src="images/exploring_small.jpg" alt="man hiking in mountain" class="explore_images" />
             <a href="productlist.html" class="cta">Exploring</a>
         </div>
-        <div class="skiing">
+        <div class="explore">
           <img src="images/skiing_small.jpg" alt="people skiing cross country" class="explore_images" />
           <a href="productlist.html" class="cta">Skiing</a>
         </div>
-        <div class="canoeing">
+        <div class="explore">
           <img src="images/canoeing_small.jpg" alt="canoeing on water" class="explore_images" />
           <a href="productlist.html" class="cta">Canoeing</a>
         </div>
