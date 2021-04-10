@@ -145,6 +145,7 @@ h1 {
     font-size: 1em;
     text-transform: uppercase;
     border-radius: 5px;
+    padding: 10px 20px;
     text-decoration: none;
     box-shadow: #444 1px 1px;
     word-wrap: break-word;

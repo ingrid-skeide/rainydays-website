@@ -9,66 +9,191 @@ body {
     'footer';
     }
 
-    /* Header */
-
+    body {
+        margin: 0;
+    }
+    
+        /* Header */
+    
     header {
-        grid-area: header;
         background-color: #D9DDD1;
-        display: flex
-        align-items: center /* doesn't work without flex */
-        justify-content: space-between
+        display: flex;
+        align-items: center; /* doesn't work without flex */
+        justify-content: space-between;
         min-height: 80px;
     }
-
+    
     .logo {
         max-width: 100px;
         padding: 10px;
         float: left; /* doesn't work because of flex on header */
         order: 1;
     }
-
+    
     nav {
-        order: 2
+        order: 2;
     }
-
-
+    
     nav, #hamburger-menu {
         display: none;
     }
     
-
+    
     .hamburger-label {
         float: right; /* doesn't work because of flex on header */
-        order: 3
+        order: 3;
         color: #0A3641;
         padding: 10px;
         display: block;
         font-size: 1.5em;
     }
-
+    
     nav ul {
         padding: 0px;
-        margin: 0px;
     }
-
+    
     nav li {
         display: block;
     }
-
+    
     nav a {
-        text-decoration: none;
         color: #0A3641;
         padding: 5px 10px;
         display: block;
     }
-
+    
     nav a:hover, .current {
         text-decoration: underline;
     }
-
-
+    
+    
     #hamburger-menu:checked ~ nav {
         display: block;
+    }
+
+    /* Main */
+    h1 {
+        margin-left: 10px;
+        margin-top: 20px;
+    }
+
+    .hikingjacket {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+    .image {
+        border: 1px solid #eeedec;
+        min-width: 400px;
+    }
+
+    .jacket-img {
+        width: 100%;
+    }
+
+    .circle {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        border: 1px solid black;
+        display: inline-block;
+        margin: 5px 10px;
+    }
+
+    .circle input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+    }
+
+    .checked {
+        border: 2px solid black;
+    }
+
+    .circle input:checked{
+        box-shadow: inset 0 0 3px #000;
+    }
+
+    .blue {
+        background-color: blue;
+    }
+
+    .red {
+        background-color: red;
+    }
+
+    .yellow {
+        background-color: yellow;
+    }
+
+    .black {
+        background-color: black;
+    }
+
+    .sizes p {
+        display: inline-block;
+        font-size: 1,5em;
+        padding: 10px;
+        margin: 0px;
+    }
+
+    .textinfo {
+        margin-left: 10px;
+    }
+
+    .section-header {
+        font-weight: bold;
+        font-size: 16px;
+        color: black;
+    }
+
+    .price p{
+        display:inline-block;
+        margin-right: 100px;
+    }
+
+    .price :nth-child(1) {
+        font-weight: bold;
+        font-size: 16px;
+    }
+
+    .price :nth-child(2) {
+        font-weight: bold;
+        font-size: 20px;
+    }
+
+    /* Links (skal dette gå på styles så vi ikke gjentar?*/
+    .cta {
+        background-color: #0A3641;
+        color: #fff;
+        padding: 7px 20px;
+        border-radius: 10px;
+        float: right;
+        margin: 0px 10px 10px 0px;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    /* Footer */
+    footer {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-direction: row-reverse;
+        margin: 0;
+        background-color: #92A190;
+        min-height: 150px;
+    }
+
+    .copyright::before, .copyright::after {
+        content: '/';
+        color: #0A3641;
+        font-size: 1,5em;
+        font-weight: bold;
     }
 
     @media (min-width: 600px) {
@@ -82,5 +207,21 @@ body {
 
         nav li {
             display: inline-block;
+        }
+
+        /* Main */
+        .hikingjacket {
+            flex-direction: row;
+            margin: 20px 13%;
+        }
+
+        h1 {
+            margin: 20px 13%;
+        }
+
+        footer{
+            position: absolute;
+            bottom: 0;
+            width: 100%;
         }
     }

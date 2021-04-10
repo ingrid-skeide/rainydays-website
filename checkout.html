@@ -2,7 +2,7 @@
 <html>
   <head>
     <title>Rainydays | Checkout</title>
-    <link href="styles/styles.css" rel="stylesheet">
+    <link href="styles/checkout.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Buy raincoats and jackets for every activity here">
@@ -27,24 +27,38 @@
       </nav>
     </header>
         <main>
-           <section>
-               <h2>Checkout</h2>
-               <form>
+            <h1>Checkout</h1>
+           <section class="checkoutsection">
+               <form class="billing">
                    <fieldset>
                         <legend>1. Billing information</legend>
+                        <label for="name">Full name*</label>
                         <input type ="text" text="name" id="name" name="name">
+                        <label for="address">Address*</label>
                         <input type="text" text="address" id="address" name="address">
-                        <input type="number" >
+                        <label for="zip">Post code*</label>
+                        <input type="number" id="zip" name="zip">
+                        <label for="country">Country*</label>
+                        <input type="text" text="country" id="country" name="country">
+                        <label for="phone">Phone number</label>
+                        <input type="tel" id="phone" name="phone">
+                        <label for="email">Email*</label>
+                        <input type="email" id="email">
+                        <p>*Required</p>
                    </fieldset>
                </form>
-           </section>
-           <section>
-               <form>
+               <form class="payment">
                    <fieldset>
                        <legend>2. Payment Information</legend>
                         <input type="radio" name="payment" value="card" id="card"><label for="card">Card</label>
                         <input type="radio" name="payment" value="paypal" id="paypal"><label for="paypal">Paypal</label>
                         <input type="radio" name="payment" value="invoice" id="invoice"><label for="invoice">Invoice</label>
+                        <label for="card" class="cardpay">Card number</label>
+                        <input type="tel" id="card" pattern="[0-9]" maxlength="16" class="cardpay">
+                        <label for="exp" class="cardpay">Exp. date</label>
+                        <input type="date" id="exp" class="cardpay">
+                        <label for="CVC" class="cardpay">CVC</label>
+                        <input type="number" id="CVC" pattern="[0-9]" maxlength="3" class="cardpay">
                     </fieldset>         
                 </form>
                <div>
@@ -53,6 +67,31 @@
                    </form>
                </div>
            </section>
+           <aside class="bag">
+               <h2>Shopping bag</h2>
+               <div>
+                   <p>Waterproof Hiking Jacket</p>
+                   <p>Blue</p>
+                   <p>Size M</p>
+                   <p>NOK 1 299</p>
+               </div>
+               <div>
+                <p>Classic Raincoat</p>
+                <p>Yellow</p>
+                <p>Size M</p>
+                <p>NOK 899</p>
+            </div>
+           </aside>
         </main>
+        <footer>
+            <img src="images/RainyDays_Logo2.png" alt="logo" class="logo">
+            <ul class="tiny_links">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="productlist.html">Women</a></li>
+              <li><a href="contact.html">Contact</a></li>
+              <li><a href="about.html">About Us</a></li>
+            </ul>
+           <p class="copyright">Copyright &copy;</p>
+          </footer>
     </body>
 </html>

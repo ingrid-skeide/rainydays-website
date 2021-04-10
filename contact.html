@@ -2,7 +2,7 @@
 <html>
   <head>
     <title>Rainydays | Contact Us</title>
-    <link href="styles/styles.css" rel="stylesheet">
+    <link href="styles/contact.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Buy raincoats and jackets for every activity here">
@@ -27,23 +27,31 @@
     </header>
     <main>
         <h1>Contact us</h1>
-        <section class="contact-form">
-            <form>
+        <section class="contact">
+
+          <form method="POST">        
+            <div class="contact-form">
+              <div>
                 <label for="name">Full name</label>
                 <input type="text" id="name">
                 <label for="email">Email</label>
                 <input type="email" id="email">
+              </div>
+              <div>
                 <label for="message">Message</label>
                 <textarea id="message" name="message"></textarea>
+              </div>
                 <input type="submit" value="Send" class="cta">
-            </form>
-        </section>
-        <section class="contact-text">
+            </div>
+          </form>
+
+          <div class="contact-text">
             <h2>What can we help you with?</h2>
             <p>We are here to answer any query you might have about our products. Whether you are wondering if you're going to buy, or you have a question about your purchased product. We are also able to answer any question you may have about recamation, refunds or fixing your product so it lasts a lifetime. Send us a message in the form above or you can also reach us by post, email or phone.</p>
             <p>Phone number: +47 000 00 000</p>
             <p>Email: customerservice@rainydays.com</p>
             <p>Post address: xxx</p>
+          </div>
         </section>
     </main>
 

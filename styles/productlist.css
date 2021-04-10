@@ -1,22 +1,19 @@
 body {
     margin: 0;
-    display: grid;
-    grid-template-columns: ;
-    grid-template-rows: 80px auto 200px;
-    grid-template-areas:
-    'header'
-    'main'
-    'footer';
 }
-/* Header */
+body {
+    margin: 0;
+}
+
+    /* Header */
 
 header {
-    grid-area: header;
     background-color: #D9DDD1;
     display: flex;
     align-items: center; /* doesn't work without flex */
     justify-content: space-between;
     min-height: 80px;
+    font-family: "Montserrat", sans-serif;
 }
 
 .logo {
@@ -53,7 +50,6 @@ nav li {
 }
 
 nav a {
-    text-decoration: none;
     color: #0A3641;
     padding: 5px 10px;
     display: block;
@@ -67,19 +63,30 @@ nav a:hover, .current {
 #hamburger-menu:checked ~ nav {
     display: block;
 }
+
+/* Main */
 h1 {
     margin: 0;
+    font-family: "Montserrat", sans-serif;
 }
 
 main {
-    border: 1px solid #999999;
-    grid-area: main;
     display: grid;
     grid-template-columns: auto;
-    grid-template-rows: repeat (13, 1fr);
+    grid-template-rows: 50px 50px auto;
     grid-template-areas:
     'topping'
     'sidebar'
+    'jackets';
+}
+
+.jackets {
+    margin: 50px 0px;
+    grid-area: jackets;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: repeat(12, auto);
+    grid-template-areas: 
     'product-one'
     'product-two'
     'product-three'
@@ -95,27 +102,33 @@ main {
 }
 
 p {
-    margin: 0;
+    text-align: left;
+    margin: 5px 1px 5px 10px;
+    
 }
 
 .topping {
     grid-area: topping;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
 }
 
 aside {
     grid-area: sidebar;
     min-height: 40px;
-    border: 1px solid #999999;
+    background-color: #0A3641;
+    color: #FFF;
+    display: flex;
+    align-items: center;
 }
 
 h2 {
-    border: 1px solid #999999;
-    margin: 0;
+    margin-left: 10px;
 }
 
-.jackets {
-    border: 1px solid #999999;
-    min-height: 10px;
+.product {
+    border: 1px solid #eeedec;
 }
 
 .product:nth-child(1) {grid-area: product-one;}
@@ -131,51 +144,73 @@ h2 {
 .product:nth-child(11) {grid-area: product-eleven;}
 .product:nth-child(12) {grid-area: product-twelve;}
 
-.product {
-    border: 1px solid #999999;
-    min-height: 50px;
+.product img {
+    width: 100%;
 }
 
+/* Links (skal dette gå på styles så vi ikke gjentar?*/
+.cta {
+    background-color: #0A3641;
+    color: #fff;
+    padding: 7px 20px;
+    border-radius: 10px;
+    float: right;
+    margin: 0px 10px 10px 0px;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Footer */
 footer {
-    grid-area: footer;
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row-reverse;
     background-color: #92A190;
+    height: 150px;
+}
+
+.copyright::before, .copyright::after {
+    content: '/';
+    color: #0A3641;
+    font-size: 1,5em;
+    font-weight: bold;
 }
 
 /* Tablet */
 
 @media  (min-width: 600px) {
-    body {
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 50px 200px 1fr 1fr 200px;
-        grid-template-areas: 
-        'nav nav nav'
-        'header header header'
-        'main main main'
-        'main main main'
-        'footer footer footer';
+
+    h2 {
+        margin-left: 13%;
     }
 
-    main {
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: repeat (6, 1fr);
+    .jackets {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(4, auto);
         grid-template-areas: 
-        'sidebar product-one product-two'
-        'sidebar product-three product-four'
-        '. product-five product-six'
-        '. product-seven product-eight'
-        '. product-nine product-ten'
-        '. product-eleven product-twelve';
+        'product-one product-two product-three'
+        'product-four product-five product-six'
+        'product-seven product-eight product-nine'
+        'product-ten product-eleven product-twelve';
+        margin: 50px 13%;
+        gap: 20px;
     }
 
-    .product {
-        min-width: 50px;
-    }
 }
 
 /* Web */
 
 @media  (min-width: 800px) {
-    body {
-
+    .jackets {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(3, auto);
+        grid-template-areas: 
+        'product-one product-two product-three product-four'
+        'product-five product-six product-seven product-eight'
+        'product-nine product-ten product-eleven product-twelve';
     }
 }
