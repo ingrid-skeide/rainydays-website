@@ -1,13 +1,14 @@
 body {
     margin: 0;
+    min-height: 100vh;
+    font-family: 'Montserrat', sans-serif;
 }
 
     /* Header */
-
 header {
     background-color: #D9DDD1;
     display: flex;
-    align-items: center; /* doesn't work without flex */
+    align-items: center;
     justify-content: space-between;
     min-height: 80px;
 }
@@ -15,7 +16,6 @@ header {
 .logo {
     max-width: 100px;
     padding: 10px;
-    float: left; /* doesn't work because of flex on header */
     order: 1;
 }
 
@@ -29,7 +29,6 @@ nav, #hamburger-menu {
 
 
 .hamburger-label {
-    float: right; /* doesn't work because of flex on header */
     order: 3;
     color: #0A3641;
     padding: 10px;
@@ -60,110 +59,60 @@ nav a:hover, .current {
     display: block;
 }
 
-/* Main */
 
-main {
-    margin: 0;
-}
-
-/* Welcome section */
-.welcome {
-    min-height: 100px;
-    position: relative;
-    background-image: url("../images/coverimage_small.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position-x: center;
-    background-position-y: center;
-    min-height: 40vh;
-}
-
-.welcome-content {
-    position: absolute;
-    top: 150px;
-    left: 50px;
-}
-
-/* Explore section (change name later)*/
-.featured {
-    display: grid;
-    gap: 10px;
-    grid-template-rows: repeat(4, 1fr);
-    grid-template-areas: 
-    'explore-one'
-    'explore-two'
-    'explore-three'
-    'explore-four';
-}
-
-.featured h2 {
-    grid-column: -1/1;
-}
-
-.explore:nth-child(1) {grid-area: explore-one;}
-.explore:nth-child(2) {grid-area: explore-two;}
-.explore:nth-child(3) {grid-area: explore-three;}
-.explore:nth-child(4) {grid-area: explore-four;}
-
-.explore_images {
-    border-radius: 10px;
-    max-width: 100%;
-}
-
-/* Trending section */
-.trending {
-    background-color:  #0A3641;
-    color: #FFF;
-    margin: 50px 0px 50px 0px;
-    padding: 20px;
-}
-
-.trending-content {
-    display: flex;
-}
-
-.trending img {
-    width:100%;
-    max-width: 800px;
-    height: auto;
-    flex: 1;
-}
-
-.trending-text {
-    margin: 10px;
-    flex: 1;
-}
-
-/* Links (do I really need this?) */
-.cta {
-    background-color: #D9DDD1;
-    color: black;
-    font-size: 1em;
-    text-transform: uppercase;
-    border-radius: 7px;
-    padding: 10px 20px;
-    position: relative;
-}
-
-a {
-    text-decoration: none;
-}
 
 /* Footer */
 footer {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: 1fr 20px;
+    grid-template-areas:
+    'bottomlogo tiny-links-one tiny-links-two'
+    '. copyright .';
     align-items: center;
-    justify-content: space-around;
-    flex-direction: row-reverse;
+    justify-items: center;
     margin: 0;
     background-color: #92A190;
     min-height: 150px;
 }
 
-.copyright::before, .copyright::after {
-    content: '/';
+.bottomlogo {
+    grid-area: bottomlogo;
+    display: flex;
+}
+.tiny-links-one {grid-area: tiny-links-one}
+.tiny-links-two {grid-area: tiny-links-two}
+
+footer ul {
+    padding: 0px;
+}
+
+footer li {
+    display: block;
+    padding: 3px;
+}
+
+footer li a {
     color: #0A3641;
-    font-size: 1,5em;
+}
+
+.tiny-links-one a, .tiny-links-two a {
+    text-decoration: none;
+}
+
+.tiny-links-one a:hover, .tiny-links-two a:hover {
+    text-decoration: underline;
+}
+
+.copyright {
+    grid-area: copyright;
+    text-align: center;
+    margin: 0px;
+}
+
+.copyright::before, .copyright::after {
+    content: ' / ';
+    color: #0A3641;
     font-weight: bold;
 }
 
@@ -174,6 +123,7 @@ footer {
     /* Header tablet*/
     nav {
         display: inline-block;
+        margin-right: 60px;
     }
 
     nav li {
@@ -186,53 +136,5 @@ footer {
 
     #hamburger-menu, .hamburger-label {
         display: none;
-    }
-
-    /* Main tablet*/    
-    .featured {
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(2, 1fr);
-        grid-template-areas: 
-        'explore-one explore-two'
-        'explore-three explore-four';
-    }
-
-    .featured h2 {
-        grid-column: -1/1;
-    }
-
-    /* Footer tablet*/
-
-    /* Web */   
-
-@media  (min-width: 800px) {
-    /* Main web*/
-    .featured {
-        grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: auto;
-        grid-template-areas: 
-        'explore-one explore-two explore-three explore-four';
-    }
-
-    .featured h2 {
-        grid-column: -1/1;
-    }
-
-    .trending-content {
-        display: flex;
-        flex-direction: row-reverse;
-        max-width: 1500px;
-        margin: 50px auto;
-        align-items: center;
-    }
-
-    .trending-text {
-        padding: 20px;
-    }
-
-    .trending-
-    
-    .trending-content > * {
-        flex: 1;
     }
 }

@@ -1,69 +1,3 @@
-body {
-    margin: 0;
-}
-body {
-    margin: 0;
-}
-
-    /* Header */
-
-header {
-    background-color: #D9DDD1;
-    display: flex;
-    align-items: center; /* doesn't work without flex */
-    justify-content: space-between;
-    min-height: 80px;
-    font-family: "Montserrat", sans-serif;
-}
-
-.logo {
-    max-width: 100px;
-    padding: 10px;
-    float: left; /* doesn't work because of flex on header */
-    order: 1;
-}
-
-nav {
-    order: 2;
-}
-
-nav, #hamburger-menu {
-    display: none;
-}
-
-
-.hamburger-label {
-    float: right; /* doesn't work because of flex on header */
-    order: 3;
-    color: #0A3641;
-    padding: 10px;
-    display: block;
-    font-size: 1.5em;
-}
-
-nav ul {
-    padding: 0px;
-}
-
-nav li {
-    display: block;
-}
-
-nav a {
-    color: #0A3641;
-    padding: 5px 10px;
-    display: block;
-}
-
-nav a:hover, .current {
-    text-decoration: underline;
-}
-
-
-#hamburger-menu:checked ~ nav {
-    display: block;
-}
-
 /* Main */
 h1 {
     margin: 0;
@@ -148,7 +82,6 @@ h2 {
     width: 100%;
 }
 
-/* Links (skal dette gå på styles så vi ikke gjentar?*/
 .cta {
     background-color: #0A3641;
     color: #fff;
@@ -162,26 +95,7 @@ a {
     text-decoration: none;
 }
 
-/* Footer */
-footer {
-    margin-top: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    flex-direction: row-reverse;
-    background-color: #92A190;
-    height: 150px;
-}
-
-.copyright::before, .copyright::after {
-    content: '/';
-    color: #0A3641;
-    font-size: 1,5em;
-    font-weight: bold;
-}
-
 /* Tablet */
-
 @media  (min-width: 600px) {
 
     h2 {
@@ -203,7 +117,6 @@ footer {
 }
 
 /* Web */
-
 @media  (min-width: 800px) {
     .jackets {
         grid-template-columns: repeat(4, 1fr);

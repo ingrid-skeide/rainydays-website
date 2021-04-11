@@ -1,74 +1,39 @@
 body {
     margin: 0;
+    min-height: 100vh;
 }
-
-    /* Header */
-
-header {
-    background-color: #D9DDD1;
-    display: flex;
-    align-items: center; /* doesn't work without flex */
-    justify-content: space-between;
-    min-height: 80px;
-}
-
-.logo {
-    max-width: 100px;
-    padding: 10px;
-    float: left; /* doesn't work because of flex on header */
-    order: 1;
-}
-
-nav {
-    order: 2;
-}
-
-nav, #hamburger-menu {
-    display: none;
-}
-
-
-.hamburger-label {
-    float: right; /* doesn't work because of flex on header */
-    order: 3;
-    color: #0A3641;
-    padding: 10px;
-    display: block;
-    font-size: 1.5em;
-}
-
-nav ul {
-    padding: 0px;
-}
-
-nav li {
-    display: block;
-}
-
-nav a {
-    color: #0A3641;
-    padding: 5px 10px;
-    display: block;
-}
-
-nav a:hover, .current {
-    text-decoration: underline;
-}
-
-
-#hamburger-menu:checked ~ nav {
-    display: block;
-}
-
 /* Main */
-.billing, .payment {
+h1 {
+    margin-left: 10px;
+}
+
+fieldset {
+    border: 0;    
     background-color: #D9DDD1;
+    border-radius: 10px;
     margin: 20px auto;
     max-width: 1000px;
 }
 
-fieldset > * {
+.billing > * {
     display: block;
+}
+
+legend {
+    padding: 10px;
+    font-weight: bold;
+
+}
+
+label {
+    padding: 7px 0px 0px 10px;
+}
+
+input {
+    padding: 10px 100px;
+    margin: 10px;
+    border-radius: 5px;
+    border: 1px solid #bebebe;
 }
 
 .cardpay {
@@ -79,32 +44,27 @@ fieldset > * {
     display: block;
 }
 
-aside {
-    background-color: #0A3641;
-    color: #FFF;
-}
-
-aside p {
-    margin: 2px;
-}
-
-/* Footer */
-footer {
+.payment-button {
     display: flex;
-    align-items: center;
     justify-content: space-around;
-    flex-direction: row-reverse;
-    margin: 0;
-    background-color: #92A190;
-    min-height: 150px;
-    position: fixed;
-    bottom: 0px;
-    width: 100%;
+    margin: 0px 0px 50px 0px;
 }
 
-.copyright::before, .copyright::after {
-    content: '/';
-    color: #0A3641;
-    font-size: 1,5em;
-    font-weight: bold;
+.cta {
+    background-color: #0A3641;
+    color: #fff;
+    padding: 7px 20px;
+    margin-bottom: 50px;
+    border-radius: 10px;
+    float: right;
+    width: 200px;
+    height: 40px;
+}
+
+    /* Web */   
+@media  (min-width: 1000px) {
+    h1 {
+        max-width: 1000px;
+        margin: 10px auto;
+    }
 }

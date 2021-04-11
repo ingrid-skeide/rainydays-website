@@ -2,102 +2,45 @@ input, textarea {
     border: 1px solid #FFF;
     border-radius: 5px;
 }
-
-body {
-    margin: 0;
-}
-
-    /* Header */
-
-header {
-    background-color: #D9DDD1;
-    display: flex;
-    align-items: center; /* doesn't work without flex */
-    justify-content: space-between;
-    min-height: 80px;
-}
-
-.logo {
-    max-width: 100px;
-    padding: 10px;
-    float: left; /* doesn't work because of flex on header */
-    order: 1;
-}
-
-nav {
-    order: 2;
-}
-
-nav, #hamburger-menu {
-    display: none;
-}
-
-
-.hamburger-label {
-    float: right; /* doesn't work because of flex on header */
-    order: 3;
-    color: #0A3641;
-    padding: 10px;
-    display: block;
-    font-size: 1.5em;
-}
-
-nav ul {
-    padding: 0px;
-}
-
-nav li {
-    display: block;
-}
-
-nav a {
-    color: #0A3641;
-    padding: 5px 10px;
-    display: block;
-}
-
-nav a:hover, .current {
-    text-decoration: underline;
-}
-
-
-#hamburger-menu:checked ~ nav {
-    display: block;
-}
-
 /* Main */
+h1 {
+    margin-left: 50px;
+}
+
 .contact {
     background-color: #0A3641;
     color: #FFF;
     padding: 20px;
 }
 
-.contact-form {
-    display: flex;
+.contact-area {
+    display: flex;  
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
-.contact-form > * {
+.contact-text {
     flex: 1;
-    display: flex;
+    margin: 50px;
+}
+
+.contact-info {
+    flex: 1;
+    padding-top: 80px;
+    margin: 50px;
 }
 
 /* Footer */
 footer {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    flex-direction: row-reverse;
-    margin: 0;
-    background-color: #92A190;
-    min-height: 150px;
     position: fixed;
     bottom: 0px;
     width: 100%;
 }
 
-.copyright::before, .copyright::after {
-    content: '/';
-    color: #0A3641;
-    font-size: 1,5em;
-    font-weight: bold;
+@media (min-width: 1000px) {
+    h1 {
+        max-width: 1000px;
+        padding-left: 50px;
+        margin: 50px auto 20px auto;
+    }
 }
