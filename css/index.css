@@ -73,6 +73,7 @@ body {
 
 .nav-wrapper {
     min-height: 10vh;
+    z-index: 1;
 }
 
 .nav-links {
@@ -185,6 +186,17 @@ footer p {
 }
 
 @media screen and (max-width: 620px) {
+    .fav-grid {
+        display: grid;
+        grid-template-columns: 100%;
+        width: 100%;
+    }
+
+    .product {
+        margin: 20px auto;
+        width: 100%;
+    }
+
     .nav-links {
         position: absolute;
         left: 0px;
