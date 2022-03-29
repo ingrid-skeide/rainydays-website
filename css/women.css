@@ -1,0 +1,122 @@
+/* Main */
+h1 {
+    margin: 0;
+    font-family: "Montserrat", sans-serif;
+}
+
+main {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 50px 50px auto;
+    grid-template-areas:
+    'topping'
+    'sidebar'
+    'jackets';
+}
+
+.jackets, .favourites {
+    margin: 50px 0px;
+    grid-area: jackets;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: repeat(12, auto);
+    grid-template-areas: 
+    'product-one'
+    'product-two'
+    'product-three'
+    'product-four'
+    'product-five'
+    'product-six'
+    'product-seven'
+    'product-eight'
+    'product-nine'
+    'product-ten'
+    'product-eleven'
+    'product-twelve';
+}
+
+p {
+    text-align: left;
+    margin: 5px 1px 5px 10px;
+    
+}
+
+.topping {
+    grid-area: topping;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+aside {
+    grid-area: sidebar;
+    min-height: 40px;
+    background-color: #0A3641;
+    color: #FFF;
+    display: flex;
+    align-items: center;
+}
+
+h2 {
+    margin-left: 10px;
+}
+
+.product {
+    border: 1px solid #eeedec;
+    border-radius: 2px;
+}
+
+.product:nth-child(1) {grid-area: product-one;}
+.product:nth-child(2) {grid-area: product-two;}
+.product:nth-child(3) {grid-area: product-three;}
+.product:nth-child(4) {grid-area: product-four;}
+.product:nth-child(5) {grid-area: product-five;}
+.product:nth-child(6) {grid-area: product-six;}
+.product:nth-child(7) {grid-area: product-seven;}
+.product:nth-child(8) {grid-area: product-eight;}
+.product:nth-child(9) {grid-area: product-nine;}
+.product:nth-child(10) {grid-area: product-ten;}
+.product:nth-child(11) {grid-area: product-eleven;}
+.product:nth-child(12) {grid-area: product-twelve;}
+
+.product img {
+    width: 100%;
+}
+
+
+a {
+    text-decoration: none;
+}
+
+/* Tablet */
+@media  (min-width: 600px) {
+
+    h2 {
+        margin-left: 13%;
+    }
+
+    .jackets {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(4, auto);
+        grid-template-areas: 
+        'product-one product-two product-three'
+        'product-four product-five product-six'
+        'product-seven product-eight product-nine'
+        'product-ten product-eleven product-twelve';
+        margin: 50px 13%;
+        gap: 20px;
+    }
+
+}
+
+/* Web */
+@media  (min-width: 800px) {
+    .jackets {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(3, auto);
+        grid-template-areas: 
+        'product-one product-two product-three product-four'
+        'product-five product-six product-seven product-eight'
+        'product-nine product-ten product-eleven product-twelve';
+    }
+}

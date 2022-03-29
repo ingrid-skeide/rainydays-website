@@ -1,0 +1,91 @@
+h1 {
+    text-align: center;
+    padding: 20px;
+}
+
+.contact {
+    background-color: white;
+    padding: 20px;
+}
+
+.contact-area {
+    display: flex;  
+    max-width: 600px;
+    flex-direction: column;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.contact-text {
+    flex: 1;
+    margin: 20px;
+    font-size: 14px;
+    padding: 20px;
+    font-weight: 400;
+    background-color: var(--main-color);
+    color: white;
+    border: 1px solid var(--main-color);
+    border-radius: 2px;
+}
+
+.contact-text p {
+    margin-top: 10px;
+    line-height: 1.5em;
+}
+
+.contact-info {
+    flex: 1;
+    margin: 30px;
+}
+
+form {
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.form-row {
+    margin: 20px 0;
+}
+
+input, textarea {
+    max-width: 500px;
+    width: 100%;
+    border: 1px solid grey;
+    border-radius: 0;
+    padding: 1em 1.7em;
+}
+
+textarea {
+    height: 8em;
+}
+
+.form-error {
+    color: red;
+    display: none;
+    text-align: left;
+    padding: 2px;
+    font-size: 0.8em;
+}
+
+button {
+    background-color: blue;
+    border: 1px solid blue;
+    border-radius: 40px;
+    transition: .3s;
+    margin-top: 20px;
+    width: 100%;
+    padding: 18px 30px;
+}
+
+.cta-wide button {
+    background-color: white;
+    border: 1px solid var(--main-color);
+    transition: all .3s;
+}
+
+.cta-wide button:hover {
+    background-color: var(--main-color);
+    color: white;
+}

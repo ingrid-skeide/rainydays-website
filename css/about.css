@@ -1,0 +1,21 @@
+.about-content {
+    max-width: 600px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    padding: 20px;
+    background-color: var(--main-color);
+    color: white;
+    border: 1px solid var(--main-color);
+    border-radius: 2px;
+}
+
+.about-content p {
+    padding-top: 20px;
+    line-height: 1.5em;
+    font-size: 14px;
+}
+
+h1 {
+    text-align: center;
+    padding: 10px;
+}
