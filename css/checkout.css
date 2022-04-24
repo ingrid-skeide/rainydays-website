@@ -1,3 +1,7 @@
+main {
+    margin-bottom: 70px;
+}
+
 .cart-info {
     background-color: #f2f2f2;
     border-bottom: 1px solid black;
@@ -76,4 +80,20 @@ h2 {
     display: flex;
     flex-direction: row-reverse;
     text-align: left;
+}
+
+.checkout {
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.checkout button {
+    width: 150px;
+    height: 45px;
+    text-align: center;
+    text-decoration: none;
 }

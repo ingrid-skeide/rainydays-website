@@ -185,6 +185,25 @@ footer p {
     align-items: center;
 }
 
+.loader {
+    margin: 0 auto;
+    border: 16px solid #f3f3f3;
+    border-top: 16px solid var(--main-color);
+    border-radius: 100%;
+    width: 80px;
+    height: 80px;
+    animation: rotate 2s linear infinite;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
 @media screen and (max-width: 620px) {
     .fav-grid {
         display: grid;
