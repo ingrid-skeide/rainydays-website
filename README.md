@@ -23,6 +23,7 @@ For the first draft of this website, the most important thing I learned is how t
 - CSS
 - Javascript
 - Wordpress
+  - WooCommerce
 
 ## Getting Started
 
